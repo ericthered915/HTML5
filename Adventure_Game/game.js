@@ -1,18 +1,16 @@
-// Single line comment
-/*
-
-multiline comment
-
-*/
-
-//alert("Warnign Will Robinson!");
-
-//confirm("Do ou like pokemon?");
-
-//prompt("What type of pokemon do you like?");
+var inventory = {
+    coins:0,
+    bread:0,
+    sword:0,
+    map:0,
+}
 
 
-//document.write(PlayerName);
+
+
+
+
+
 
 Game();
 
@@ -25,10 +23,10 @@ function Game(){
 	alert("Ah, Welcome to Povis, "+ playerName);
 	
 	House();
-	//House schtuff
+	//House start
 	function House(){
-		var house = prompt("You wake up in front of a house. \n -look around \n - go back to sleep \n - taunt the guard").toLowerCase();
-		
+		var house = prompt("You wake up in front of a house. \n -look around \n - go back to sleep").toLowerCase();
+		//
 		if(house == "look around" || house == "look"){
 			
 			var houseLook = prompt("the house is old, creaky, and has the doors nailed shut and a mound of bugs, you dont know what kind of bug they are. \n -open door \n -walk away \n -eat bugs");
@@ -63,9 +61,6 @@ function Game(){
 			else if(swampPath = "burn down hut"){
 				alert("You burn down the hut, you hear the Witch screaming in pain. she is dead.");
 			}	
-			else{
-				alert("dont throw rocks at hut...please!"); 
-			}	
 			
 			
 		}
@@ -77,7 +72,26 @@ function Game(){
 			Swamp();
 		}
 		
-		
+        Castle();
+        
+		function Castle(){
+            var inside castle = prompt("- go upstairs go downstairs -courtyard -balcony - look ").toLowerCase();
+            switch(insideCastle){
+                case "upstairs":
+                    var upstairs = prompt("You walk a long set of stairs to the top floor of the castle");
+                    break;
+                case "courtyard":
+                    alert(you go to the courtyard);
+                    break;
+                case "balcony":
+                    alert("you go to the balcony");
+                    break;
+                default:
+                    alert("I dont know what "+insideCastle+ is!")
+                          }
+
+            
+        }
 	} 
 	
 		
@@ -88,5 +102,5 @@ function Game(){
 	
 	
 	
-	
+                          }
 }
