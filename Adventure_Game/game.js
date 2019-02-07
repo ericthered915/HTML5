@@ -1,8 +1,8 @@
 var inventory = {
-    coins:0,
-    bread:0,
-    sword:0,
-    map:0,
+    coins: 0,
+    bread: 0,
+    sword: 0,
+    map: 0,
 }
 
 
@@ -29,7 +29,7 @@ function Game(){
 		//
 		if(house == "look around" || house == "look"){
 			
-			var houseLook = prompt("the house is old, creaky, and has the doors nailed shut and a mound of bugs, you dont know what kind of bug they are. \n -open door \n -walk away \n -eat bugs");
+			var houseLook = prompt("the house is old, creaky, and has the doors nailed shut. \n -open door \n -walk away");
 		}
 		
 		else if(house == "go back to sleep" || house == "sleep"){
@@ -39,16 +39,20 @@ function Game(){
 			if(resume){
 				House();
 			}
-			else{
-				alert("Game Over!");
+			else{alert("Game Over!");
 			}
-		}
+       
+        }
+        
+        
+        
+        
 		
-		else{
-			alert("I dont know what "+house+" is!");
+		else{alert("I dont know what "+house+" is!");
 			House();
 		}
-	}
+	
+    Swamp();
 	//Swamp Code
 	function Swamp(){
 		var swamp1 = prompt("This is a musty, monster ridden swamp. \n -follow path \n -swim");
@@ -72,35 +76,20 @@ function Game(){
 			Swamp();
 		}
 		
-        Castle();
-        
-		function Castle(){
-            var inside castle = prompt("- go upstairs go downstairs -courtyard -balcony - look ").toLowerCase();
-            switch(insideCastle){
-                case "upstairs":
-                    var upstairs = prompt("You walk a long set of stairs to the top floor of the castle");
-                    break;
-                case "courtyard":
-                    alert(you go to the courtyard);
-                    break;
-                case "balcony":
-                    alert("you go to the balcony");
-                    break;
-                default:
-                    alert("I dont know what "+insideCastle+ is!")
-                          }
+                          
 
             
         }
 	} 
-	
-		
-		
-		
-	
-	
-	
-	
-	
-                          }
+    
 }
+	
+		
+		
+		
+	
+	
+	
+	
+	
+                          
