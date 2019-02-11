@@ -16,7 +16,7 @@ Game();
 
 function Game(){
 	
-	alert("The Land of Povis!");
+	alert("Welcome to the Land of Povis!");
 	
 	var playerName = prompt("Welcome, Traveler! What is your name?");
 	
@@ -30,6 +30,7 @@ function Game(){
 		if(house == "look around" || house == "look"){
 			
 			var houseLook = prompt("the house is old, creaky, and has the doors nailed shut. \n -open door \n -walk away");
+            
 		}
 		
 		else if(house == "go back to sleep" || house == "sleep"){
@@ -47,6 +48,7 @@ function Game(){
         
         
         
+        
 		
 		else{alert("I dont know what "+house+" is!");
 			House();
@@ -60,7 +62,13 @@ function Game(){
 		if(swamp1 == "follow" || swamp1 == "follow path"){
 			var swampPath = prompt("You enter on the swamp path and head north in the disance you see a witches hut. As you approach it you can hear the couldren bubbling, and her laugh growing ever more insane. \n -enter hut \n -burn hut");
 			if( swampPath = "enter"){
-				alert("You entered the hut. There is a Witch bent over a large cauldron on the fire in the center of the room.");
+				alert("You entered the hut. There is a Witch bent over a large cauldron on the fire in the center of the room. /n talk to the witch /n push the witch in");
+                
+                if(swampPath "talk to the witch" || swampPath "talk"){
+                    prompt("Get Out!")
+                    Swamp();
+                    
+                }
 			}	
 			else if(swampPath = "burn down hut"){
 				alert("You burn down the hut, you hear the Witch screaming in pain. she is dead.");
