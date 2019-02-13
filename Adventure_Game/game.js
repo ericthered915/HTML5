@@ -60,16 +60,22 @@ function Game(){
 		var swamp1 = prompt("This is a musty, monster ridden swamp. \n -follow path \n -swim");
 		
 		if(swamp1 == "follow" || swamp1 == "follow path"){
+            
 			var swampPath = prompt("You enter on the swamp path and head north in the disance you see a witches hut. As you approach it you can hear the couldren bubbling, and her laugh growing ever more insane. \n -enter hut \n -burn hut");
-			if( swampPath = "enter"){
+            
+			if( swampPath == "enter"){
 				alert("You entered the hut. There is a Witch bent over a large cauldron on the fire in the center of the room. /n talk to the witch /n push the witch in");
-                
-                if(swampPath "talk to the witch" || swampPath "talk"){
+              }  
+            else if(swampPath == "talk to the witch" || swampPath "talk"){
                     prompt("Get Out!")
                     Swamp();
                     
-                }
-			}	
+            }
+            else{
+                alert("I dont understand what you are saying!");
+                Swamp();
+            }
+				
 			else if(swampPath = "burn down hut"){
 				alert("You burn down the hut, you hear the Witch screaming in pain. she is dead.");
 			}	
