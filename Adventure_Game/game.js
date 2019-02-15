@@ -23,78 +23,38 @@ function Game(){
 	alert("Ah, Welcome to Povis, "+ playerName);
 	
 	House();
-	//House start
 	function House(){
-		var house = prompt("You wake up in front of a house. \n -look around \n - go back to sleep").toLowerCase();
-		//
-		if(house == "look around" || house == "look"){
-			
-			var houseLook = prompt("the house is old, creaky, and has the doors nailed shut. \n -open door \n -walk away");
+        //this leads away from the house
+        var house = prompt("you wake up next a house, you dont know how you got there. all you know is that your in Povis /n -look around /n -go inside").toLowerCase();
+        
+        if(house == "look around" || house == "look"){
             
-		}
-		
-		else if(house == "go back to sleep" || house == "sleep"){
-			alert("You fall back to sleep in the dirt. You dream of a land full of the impossible");
-			var resume = confirm("Do you wish to continue?");
-			
-			if(resume){
-				House();
-			}
-			else{alert("Game Over!");
-			}
-       
+            var houseLook = prompt("the house is old and creeky, and there is a path. /n - go inside /n - follow path");
+            
+            if(houseLook == "follow path" || "follow"){
+            var followpath = prompt("you leave the house behind, and travel the path")
+          Swamp();
+        }
         }
         
-        
-        
-        
-        
-		
-		else{alert("I dont know what "+house+" is!");
-			House();
-		}
-	
-    Swamp();
-	//Swamp Code
-	function Swamp(){
-		var swamp1 = prompt("This is a musty, monster ridden swamp. \n -follow path \n -swim");
-		
-		if(swamp1 == "follow" || swamp1 == "follow path"){
+        //this leads inside the house
+        else if(house == "go inside" || house == "inside"){
+            var housebreakdown = prompt ("the door is nailed shut, it wont open, /n - break down door /n - knock on door");
             
-			var swampPath = prompt("You enter on the swamp path and head north in the disance you see a witches hut. As you approach it you can hear the couldren bubbling, and her laugh growing ever more insane. \n -enter hut \n -burn hut");
             
-			if( swampPath == "enter"){
-				alert("You entered the hut. There is a Witch bent over a large cauldron on the fire in the center of the room. /n talk to the witch /n push the witch in");
-              }  
-            else if(swampPath == "talk to the witch" || swampPath "talk"){
-                    prompt("Get Out!")
-                    Swamp();
-                    
             }
-            else{
-                alert("I dont understand what you are saying!");
-                Swamp();
-            }
-				
-			else if(swampPath = "burn down hut"){
-				alert("You burn down the hut, you hear the Witch screaming in pain. she is dead.");
-			}	
-			
-			
-		}
-		else if(swamp1 == "Swim"){
-			
-		}
-		else{
-			alert("I don't understand "+swamp1);
-			Swamp();
-		}
-		
-                          
-
-            
+        if(housebreakdown == "break down door" || housebreakdown == "break down"){
+            var houseInside = alert ("the door breaks off its hinges easily")
+            InsideHouse1();
         }
-	} 
+        else if(housebreakdown == "knock on door" || housebreakdown == "knock"){
+            var houseknock = prompt ("you knock on the door, and nobody answers, but you hear the scurrering of rats")
+        }
+            
+        
+        
+    }
+	 
     
 }
 	
