@@ -32,7 +32,7 @@ function Game(){
             var houseLook = prompt("the house is old and creeky, and there is a path. /n - go inside /n - follow path");
             
             if(houseLook == "follow path" || "follow"){
-            var followpath = prompt("you leave the house behind, and travel the path")
+            var followpath = prompt("you leave the house behind, and travel the path");
           Swamp();
         }
         }
@@ -44,15 +44,24 @@ function Game(){
             
             }
         if(housebreakdown == "break down door" || housebreakdown == "break down"){
-            var houseInside = alert ("the door breaks off its hinges easily")
+            var houseInside = alert ("the door breaks off its hinges easily");
             InsideHouse1();
         }
         else if(housebreakdown == "knock on door" || housebreakdown == "knock"){
-            var houseknock = prompt ("you knock on the door, and nobody answers, but you hear the scurrering of rats")
+            var houseknock = prompt ("you knock on the door, and nobody answers, but you hear the scurrering of rats /n - kick down door /n - look for another way in");
+        }
+        else if(houseknock == "kick down door" || houseknock == "kick down"){
+            var houseInside = alert ("the door breaks off its hinges easily");
+            InsideHouse1();
         }
             
         
         
+    }
+    
+    function InsideHouse1(){
+        
+        var inside = prompt("you are now inside the living room of the abandond house");
     }
 	 
     
