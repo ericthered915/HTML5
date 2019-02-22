@@ -19,7 +19,11 @@ function Game(){
 	alert("Welcome to the Land of Povis!");
 	
 	var playerName = prompt("Welcome, Traveler! What is your name?");
-	
+    
+    while(!confirm("Are you sure you want "+playerName+" as a name?")){
+        playerName = prompt("What name do you want?");
+    }	
+    
 	alert("Ah, Welcome to Povis, "+ playerName);
 	
 	House();
@@ -61,7 +65,19 @@ function Game(){
     
     function InsideHouse1(){
         
-        var inside = prompt("you are now inside the living room of the abandond house");
+        var livingroom = prompt("you are now inside the living room of the abandond house, /n - look around /n - go to kitchen /n - go to bedroom");
+        
+        if(livingroom == "look around" || livingroom == "look"){
+            livingroom = prompt("you dont see anything of value.");
+            InsideHouse1();
+        }
+        switch(InsideHouse1){
+                case "go to kitchen"
+                
+                var kitchen = prompt("you enter the kitchen and you are greeted by a small and harmless goblin, it look likes hes running a shop in the house, doesn't look like the best marketing scheme.");
+                break 
+                
+        }
     }
 	 
     
