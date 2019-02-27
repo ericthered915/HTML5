@@ -7,11 +7,6 @@ var inventory = {
 
 
 
-
-
-
-
-
 Game();
 
 function Game(){
@@ -64,20 +59,63 @@ function Game(){
     }
     
     function InsideHouse1(){
+        var entryway = prompt("you enter the house, you see a long and dark hallway with multiple rooms - enter hallway -leave house").toLowerCase();
         
-        var livingroom = prompt("you are now inside the living room of the abandond house, /n - look around /n - go to kitchen /n - go to bedroom");
+        switch(entryway){
+            case "hallway":
+                Hallway();
+            break;
+            case "kitchen":
+                Kitchen();
+            break;
+            case "livingroom":
+               Livingroom();
+            break;
+            case "Bedroom":
+                Bedroom();
+            break;
+            case "bathroom":
+                Bathroom();
+            break
+                
+                
+            
+            default:
+            alert("I dont know what "+entryway+" is?!?!");
+                InsideHouse1();
+        }
+        
+        function Hallway(){
+            //Hallway code goes here
+            var hall = prompt("you begin walking down the hall, you see four rooms, -enter Kitchen -enter Livingroom -enter Bedroom -enter Bathroom");
+            
+        }
+        function Kitchen(){
+            //Kitchen code goes here
+        }  var kit = prompt("you enter the kitchen, its cupboards are all swung open, but not everything is gone. -look around -look in cupboards -hallway ");
+        Hallway();
+        
+        function Livingroom(){
+            //Livingroom code goes here
+        }
+        function Bedroom(){
+            //Bedroom code goes here
+        }
+        function Bathroom(){
+            //Entryway code goes here
+            
+        }
+        
+        /*var livingroom = prompt("you are now inside the living room of the abandond house, /n - look around /n - go to kitchen /n - go to bedroom");
         
         if(livingroom == "look around" || livingroom == "look"){
             livingroom = prompt("you dont see anything of value.");
             InsideHouse1();
-        }
-        switch(InsideHouse1){
-                case "go to kitchen"
+        }*/
+       
+        
                 
-                var kitchen = prompt("you enter the kitchen and you are greeted by a small and harmless goblin, it look likes hes running a shop in the house, doesn't look like the best marketing scheme.");
-                break 
-                
-        }
+        
     }
 	 
     
