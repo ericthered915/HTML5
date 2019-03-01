@@ -31,8 +31,9 @@ function Game(){
             var houseLook = prompt("the house is old and creeky, and there is a path. /n - go inside /n - follow path");
             
             if(houseLook == "follow path" || "follow"){
-            var followpath = prompt("you leave the house behind, and travel the path");
-          Swamp();
+            var followpath = alert("you leave the house behind, and travel the path, as your travelling you find yourself lost, and and beging to feel hungry.");
+                var fp = alert("you died!");
+          
         }
         }
         
@@ -59,7 +60,10 @@ function Game(){
     }
     
     function InsideHouse1(){
-        var entryway = prompt("you enter the house, you see a long and dark hallway with multiple rooms - enter hallway -leave house").toLowerCase();
+        var entryway = prompt("you enter the house, you see a long and dark hallway with multiple rooms - hallway -leave house").toLowerCase();
+        if(entryway == "leave house" ||entryway == "leave"){
+        var entryw = alert("you have left the house");
+            House();
         
         switch(entryway){
             case "hallway":
@@ -81,7 +85,7 @@ function Game(){
                 
             
             default:
-            alert("I dont know what "+entryway+" is?!?!");
+            alert("I dont know what "+entryway+" is?!");
                 InsideHouse1();
         }
         
@@ -92,11 +96,36 @@ function Game(){
         }
         function Kitchen(){
             //Kitchen code goes here
-        }  var kit = prompt("you enter the kitchen, its cupboards are all swung open, but not everything is gone. -look around -look in cupboards -hallway ");
+        var kit = prompt("you enter the kitchen, its cupboards are swung open, but not everything is gone. -look around -look in cupboards -hallway");
+            if (kit == "look around" ||kit == "look"){
+                var kitlook = alert("as you look around the kitchen, you notice that table is wobbly");
+            
+                var klook = prompt("-ignore table -move table"){
+                    if (klook == "move table" ||klook == "move");
+                    var tablemove = alert("you move the table to reveal a trap door. the door leads into a dark pit")
+                    
+                }
+            
+        Kitchen();
+            }
+            
+            
+                
+            
+            else if(kit == "look in cupboards" ||kit == "cupboards"){
+                    var kitcupboard = prompt("you find an empty can");
+                }
+                
+                
+            
+        }
         Hallway();
         
         function Livingroom(){
             //Livingroom code goes here
+            var live = prompt("you enter the livingroom, theres a rug in the center of the room with a couch facing away from the door"){
+                
+            }
         }
         function Bedroom(){
             //Bedroom code goes here
@@ -106,7 +135,7 @@ function Game(){
             
         }
         
-        /*var livingroom = prompt("you are now inside the living room of the abandond house, /n - look around /n - go to kitchen /n - go to bedroom");
+        /*var livingroom = prompt("you are now inside the living room of the abandond house, /n - look around 
         
         if(livingroom == "look around" || livingroom == "look"){
             livingroom = prompt("you dont see anything of value.");
@@ -122,7 +151,15 @@ function Game(){
 }
 	
 		
-		
+var inventory = {
+    coins: 0,
+    key:0,
+    candle:0,
+    matches:0,
+}		
+
+
+function
 		
 	
 	
