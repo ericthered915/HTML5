@@ -1,12 +1,3 @@
-var inventory = {
-    coins: 0,
-    bread: 0,
-    sword: 0,
-    map: 0,
-}
-
-
-
 Game();
 
 function Game(){
