@@ -82,20 +82,29 @@ function Game(){
         
         function Hallway(){
             //Hallway code goes here
-            var hall = prompt("you begin walking down the hall, you see four rooms, -enter Kitchen -enter Livingroom -enter Bedroom -enter Bathroom");
+            var hall = prompt("you begin walking down the hall, you see four rooms, n/ -enter Kitchen n/ -enter Livingroom n/ -enter Bedroom n/ -enter Bathroom");
             
         }
         function Kitchen(){
             //Kitchen code goes here
-        var kit = prompt("you enter the kitchen, its cupboards are swung open, but not everything is gone. -look around -look in cupboards -hallway");
+        var kit = prompt("you enter the kitchen, its cupboards are swung open, but not everything is gone. -look around -look in cupboards -hallway"){
             if (kit == "look around" ||kit == "look"){
-                var kitlook = alert("as you look around the kitchen, you notice that table is wobbly");
+                var kitlook = alert("as you look around the kitchen, you notice that table is wobbly"){
             
-                var klook = prompt("-ignore table -move table"){
+                var kitlook = prompt("n/ -ignore table n/ -move table"){
                     if (klook == "move table" ||klook == "move");
-                    var tablemove = alert("you move the table to reveal a trap door. the door leads into a dark pit")
-                    
+                
+                
+                    var tablemove = alert("you move the table to reveal a trap door. the door leads into a dark pit /n - jump down hole"){
+                      if(tablemove = "jump down hole" ||tablemove = "jump"){
+                      }
+                      }  
+                      
+                    }
                 }
+                    
+            
+            }
             
         Kitchen();
             }
@@ -120,10 +129,14 @@ function Game(){
         }
         function Bedroom(){
             //Bedroom code goes here
-        }
-        function Bathroom(){
-            //Entryway code goes here
-            
+            var hbedroom = prompt("you enter the bedroom, theres a bed with raggity old sheets and a nightstand to the left with an old candle on top -move sheets -search nightstand"){
+                if(hbedroom == "move sheets" ||hbedroom == "sheets"){
+                    var sheets = alert "a goblin was lurking in the sheets! he got angry you found him, and ate you Game Over!"
+                }
+               if(hbedroom == "search nightstand" ||hbedroom == "nightstand"){
+                   var nightstand = prompt("you walk up to the nightstand and open the drawer, if was full of mostly junk, but you find a key");
+               } 
+            }
         }
         
         /*var livingroom = prompt("you are now inside the living room of the abandond house, /n - look around 
@@ -131,7 +144,21 @@ function Game(){
         if(livingroom == "look around" || livingroom == "look"){
             livingroom = prompt("you dont see anything of value.");
             InsideHouse1();
-        }*/
+        }
+        
+        This code enters rooms with conditionals
+        var key = false;
+
+var room = prompt("Enter room?");
+
+if(room == "enter" && key == true){
+  alert("You enter the room");
+  
+}
+else{
+  alert("door is locked, you need a key!");
+}
+        */
        
         
                 
@@ -140,8 +167,12 @@ function Game(){
 	 
     
 }
-	
-		
+
+    
+    
+    
+/*	Reference only	
+
 var inventory = {
     coins: 0,
     key:0,
@@ -150,9 +181,35 @@ var inventory = {
 }		
 
 
-function
+function Shop(){
+    
+    var shopKeeper = prompt("What can I do for you? \n - buy candle");
+    
+    if(shopKeeper == "buy candle"){
+        if(inventory.coins >= 4){
+            alert("You have purchased a candle");
+            inventory.coins -= 4;
+            inventory.candle ++;
+            alert("You now have "+inventory.candle+" candles! \n You have "+inventory.coins+" coins left!");
+        Shop();    
+        }
+        else{
+            alert("You do not have enough coins!");
+            Shop();
+        }    
+    }
+    else if(shopKeeper == "leave"){
+        Game();
+    }
+    else{
+        alert("Make up your mind....I cant stand here all day!");
+        Shop();
+    }
+    
+    
+}
 		
-	
+*/	
 	
 	
 	
