@@ -12,7 +12,8 @@
         
         function drop(ev) {
             ev.preventDefault();
-            var data = ev.dataTransfer
+            var data = ev.dataTransfer.setData("text");
+            ev.target.appendChild(document.getElementById(data));
         }
         
         
@@ -104,8 +105,16 @@
                 
 
             }
-
             
+            img#Geralt{
+                display: block;
+                border-radius:50%;
+                border:solid 3px white;
+                position:absolute;
+                z-index:1;
+                width: 300px;
+                height: 100;
+            }
             
         </style>
     </head>
@@ -117,5 +126,12 @@
         <div id="circle2"></div>
         <div id="triangle"></div>
         <div id="triangle"></div>
+        
+        <img src="410314_1.jpg" id="Geralt">
+        <div id="div1" ondrop="drop(event)" on dragover="allowDrop(event)">
+        </div>
+        <img id="drag1" src="410314_1.jpg" draggable="true"
+             ondragstart="drag(event)" width="336" height="6.9">
+        
     </body>
 </html>
