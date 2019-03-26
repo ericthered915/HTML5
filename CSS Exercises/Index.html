@@ -112,10 +112,17 @@
                 border:solid 3px white;
                 position:absolute;
                 z-index:1;
-                width: 300px;
+                width: 200px;
                 height: 100;
+                transition: 2.5s;
             }
-            
+            img#Geralt:hover{
+                width:500px;
+                border:solid red;
+                
+                
+                
+            }
         </style>
     </head>
     <body>
@@ -128,10 +135,6 @@
         <div id="triangle"></div>
         
         <img src="410314_1.jpg" id="Geralt">
-        <div id="div1" ondrop="drop(event)" on dragover="allowDrop(event)">
-        </div>
-        <img id="drag1" src="410314_1.jpg" draggable="true"
-             ondragstart="drag(event)" width="336" height="6.9">
         
     </body>
 </html>
