@@ -73,3 +73,31 @@ div#content{
     background: cornflowerblue;
 }
 
+div#product_grp{
+    max-width:80%;
+    min-width:20%;
+    margin:auto;
+}
+
+figure.product{
+    float:left;
+    margin: 10px;
+    min-width:30%;
+    max-width:50%;
+    background color:floralwhite
+    border-radius:5%;
+}
+figure.product img{
+    display:block;
+    padding: 10px 0;
+    width:80%;
+    margin: auto;
+    
+}
+figure.product figcaption{
+    text-align: center;
+    color: white;
+    font-family:sans-serif;
+    font-size:24px;
+}
+
