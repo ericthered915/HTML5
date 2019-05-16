@@ -12,14 +12,12 @@ body
  div#container
 {
 	width:100%;
-	border:3px dashed blue;
 	background-color:cornflowerblue;
 }
 
 header
 {
-	width:94%;
-	padding:50px;
+	width:100%;
 	background-color: skyblue;
 }
 
@@ -47,7 +45,7 @@ div#content{
 
 
 .icon-bar {
-    position:absolute;
+    position:fixed;
     bottom:0;
     left:0;
     width:100%;
@@ -90,9 +88,15 @@ figure.product{
 figure.product img{
     display:block;
     padding: 10px 0;
-    width:80%;
+    width:60%;
     margin: auto;
     
+}
+
+figure.product "hammer.jpg"{
+    display:block;
+    padding:10px;
+    width:50%;
 }
 figure.product figcaption{
     text-align: center;
